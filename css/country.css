@@ -65,3 +65,152 @@ a:hover {
 a:active {
     color: inherit;
 }
+
+#resultado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+#resultado > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#resultado > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+#resultado img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#resultado p:nth-of-type(1) {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin: 10px 0 5px;
+    padding: 0 10px;
+}
+
+#resultado p:nth-of-type(2) {
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+    margin: 0 0 5px;
+    padding: 0 10px;
+}
+
+#resultado p:nth-of-type(3) {
+    font-size: 0.9em;
+    color: #888;
+    text-align: center;
+    margin: 0 0 15px;
+    padding: 0 10px;
+}
+
+#resultado a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #d4af37;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 15px;
+}
+
+#resultado a:hover {
+    background-color: #b3932a;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Formulario datalist */
+
+/* Contenedor del formulario */
+#select {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f5f5f5; /* Fondo suave y neutro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el label */
+#select label {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333; /* Texto oscuro */
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Estilo para el contenedor de input + botón */
+.input-container {
+    display: flex;
+    align-items: center; /* Centrar verticalmente el input y el ícono */
+}
+
+/* Estilo para el input de selección de país */
+#select input {
+    width: calc(100% - 40px); /* Asegurar que el input tenga un tamaño adecuado para que el ícono se alinee */
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box; /* Asegura que el padding no se escape del ancho del input */
+}
+
+/* Cambios al hacer focus en el input */
+#select input:focus {
+    border-color: #888; /* Cambio a color gris claro */
+    outline: none; /* Quitar borde por defecto */
+}
+
+/* Estilo del botón con ícono */
+#select button {
+    background-color: transparent; /* Sin color de fondo */
+    border: 2px solid #333; /* Borde gris oscuro */
+    color: #333; /* Color del texto */
+    font-size: 1.2em; /* Tamaño reducido del ícono */
+    padding: 5px 8px; /* Menor tamaño en los bordes */
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px; /* Separación entre el input y el ícono */
+}
+
+/* Efecto hover en el botón */
+#select button:hover {
+    transform: scale(1.1); /* Crecer ligeramente cuando el mouse está sobre el ícono */
+}
+
+/* Estilo específico para el ícono */
+#select button i {
+    font-size: 0.9em; /* Ícono más pequeño */
+    margin: 0;
+}

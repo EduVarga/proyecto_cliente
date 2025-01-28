@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <title>PokerEvents</title>
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-        <link rel="stylesheet" href="css/date.css">
+        <link rel="stylesheet" href="css/country.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
         <nav>
@@ -16,6 +17,38 @@
             </div>
         </nav>
 
+        <div id="select">
+            <form id="formPais">
+                <label for="paises">Choose the country:</label>
+                <div class="input-container">
+                    <input list="paises" name="pais" id="pais">
+                    <button type="submit">
+                        <i class="fa fa-search"></i> <!-- Ícono de búsqueda -->
+                    </button>
+                </div>
+                <datalist id="paises">
+                    <option>Francia</option>
+                    <option>Reino Unido</option>
+                    <option>Alemania</option>
+                    <option>España</option>
+                    <option>Mónaco</option>
+                    <option>Portugal</option>
+                    <option>Italia</option>
+                    <option>Países Bajos</option>
+                    <option>Austria</option>
+                    <option>Rumanía</option>
+                    <option>Bélgica</option>
+                    <option>República Checa</option>
+                    <option>Irlanda</option>
+                    <option>Hungría</option>
+                </datalist>
+                <!--<input type="submit" value=">">-->
+            </form>
+        </div>
+
+        <div id="resultado"></div>
+
         <script src="js/jquery.js"type="text/javascript"></script>
+        <script src="js/country.js"></script>
     </body>
 </html>
