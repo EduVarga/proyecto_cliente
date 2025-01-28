@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#expandirTexto {
+    display: flex;
+    align-items: center;
+}
+
+#mostrarMensaje {
+    background-color: transparent;
+    border: none;
+    color: #707070;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+#mostrarMensaje:focus {
+    outline: none;
+}
+
+#infoTexto {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+    font-style: italic;
+    display: none;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    background-color: #fafafa;
+}
+
+input:focus {
+    outline: none;
+    border-color: #707070;
+    background-color: #fff;
+}
+
+input:invalid {
+    border: 2px solid #707070; 
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #b8b8b8;
+}
+
+button:active {
+    background-color: #a0a0a0;
+}
+
+.success-message, .error-message {
+    display: none;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.success-message {
+    background-color: #27ae60; 
+    color: #fff;
+}
+
+.error-message {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+}

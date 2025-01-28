@@ -1,14 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="eng">
     <head>
         <meta charset="utf-8">
         <title>PokerEvents</title>
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/formulario.css">
     </head>
     <body>
-        <h2>Formulario de registro de evento</h2>
+        <div class="contenedor">
+            <h2>Registration for the event
+                <div id="expandirTexto">
+                    <button id="mostrarMensaje">
+                        <span>+</span>
+                    </button>
+                </div>
+            </h2>
+        
+            <p id="infoTexto" style="display: none;">Once the registration is complete, you will not be able to request a cancellation. Please confirm your data carefully before submitting.</p>
+            <br>
+            <form id="formularioRegistro" method="POST" action="registro.php">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="phone_number">Phone number:</label>
+                <input type="text" id="phone_number" name="phone_number" required pattern="\d{9}" title="The number must be 9 digits.">
+        
+                <button type="submit">Register</button>
+            </form>
+        </div>        
 
         <script src="js/jquery.js"type="text/javascript"></script>
+        <script src="js/formulario.js"></script>
     </body>
 </html>

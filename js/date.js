@@ -42,7 +42,7 @@ function cargarTorneos() {
                     tarjeta.appendChild(fecha);
 
                     var enlace = document.createElement("a");
-                    enlace.href = "formulario.html";
+                    enlace.href = "formulario.html?event_id=" + torneo.id;
                     enlace.textContent = "Register";
                     tarjeta.appendChild(enlace);
 
