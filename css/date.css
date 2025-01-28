@@ -65,3 +65,126 @@ a:hover {
 a:active {
     color: inherit;
 }
+
+#resultado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+#resultado > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#resultado > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+#resultado img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#resultado p:nth-of-type(1) {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin: 10px 0 5px;
+    padding: 0 10px;
+}
+
+#resultado p:nth-of-type(2) {
+    font-size: 1em;
+    color: #555;
+    text-align: center;
+    margin: 0 0 5px;
+    padding: 0 10px;
+}
+
+#resultado p:nth-of-type(3) {
+    font-size: 0.9em;
+    color: #888;
+    text-align: center;
+    margin: 0 0 15px;
+    padding: 0 10px;
+}
+
+#resultado a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #d4af37;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 15px;
+}
+
+#resultado a:hover {
+    background-color: #b3932a;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#contenedor_datapicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contenedor_datapicker p:first-of-type {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#contenedor_datapicker p:last-of-type {
+    font-size: 0.95em;
+    color: #555;
+    margin: 0;
+    text-align: center;
+}
+
+#datepicker {
+    margin-left: 5px;
+    padding: 8px 12px;
+    font-size: 0.95em;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#datepicker:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+    outline: none;
+}

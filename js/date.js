@@ -22,14 +22,31 @@ function cargarTorneos() {
                 resultadoDiv.innerHTML = "";
 
                 eventos.forEach(function (torneo) {
-                    /*var imagen = document.createElement("img");
+                    var tarjeta = document.createElement("div");
+
+                    var imagen = document.createElement("img");
                     imagen.src = torneo.city_image;
                     imagen.alt = torneo.name + " city image";
-                    resultadoDiv.appendChild(imagen);*/
+                    tarjeta.appendChild(imagen);
 
-                    var item = document.createElement("p");
-                    item.textContent = torneo.name;
-                    resultadoDiv.appendChild(item);
+                    var nombre = document.createElement("p");
+                    nombre.textContent = torneo.name;
+                    tarjeta.appendChild(nombre);
+
+                    var paisCiudad = document.createElement("p");
+                    paisCiudad.textContent = torneo.country + " - " + torneo.city;
+                    tarjeta.appendChild(paisCiudad);
+
+                    var fecha = document.createElement("p");
+                    fecha.textContent = torneo.date;
+                    tarjeta.appendChild(fecha);
+
+                    var enlace = document.createElement("a");
+                    enlace.href = "formulario.html";
+                    enlace.textContent = "Registro";
+                    tarjeta.appendChild(enlace);
+
+                    resultadoDiv.appendChild(tarjeta);
                 });
             }
         };
